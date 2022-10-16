@@ -1,24 +1,24 @@
 h1 {
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 84px;
-    text-align: center;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 84px;
+  text-align: center;
 }
 
 h2 {
-    font-size: 60px;
-    line-height: 65px;
-    font-weight: 700;
+  font-size: 60px;
+  line-height: 65px;
+  font-weight: 700;
 }
 
 h3 {
-    font-size: 30px;
-    line-height: 34px;
+  font-size: 30px;
+  line-height: 34px;
 }
 
 h4 {
-    font-size: 24px;
-    line-height: 32px;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 h5 {
@@ -44,17 +44,18 @@ h5 {
 }
 
 h6 {
- 
+  font-size: 18px;
+  line-height: 18px;
 }
 p {
-    &.big {
-        font-size: 18px;
-        line-height: 28px;
-    }
-    &.ex {
-        font-size: 24px;
-        line-height: 36px;
-    }
+  &.big {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  &.ex {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 ul {
     li {
@@ -69,7 +70,7 @@ ul {
 }
 
 main {
-    overflow: hidden;
+  overflow: hidden;
 }
 .button {
     display: inline-flex;
@@ -103,7 +104,6 @@ main {
             }
         }
     }
-
 }
 .video {
     display: flex;

@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   &__inner {
     padding: 43px 0 60px;
     max-width: 950px;
@@ -22,6 +23,7 @@
         line-height: 18px;
         color: $white;
         margin-right: 36px;
+        font-weight: 600;
         &:last-child {
           margin-right: unset;
         }
@@ -29,7 +31,7 @@
     }
     &-info {
       font-size: 18px;
-      line-height: 18px;
+      line-height: 35px;
       color: $gray;
       margin-bottom: 48px;
       text-align: center;
@@ -49,12 +51,12 @@
         margin-right: 12px;
         background: transparent;
         @include transition;
-        &:nth-child(1){
-        svg{
-          left: 53%;
-         top: 52%;
-         width: 23px;
-        }
+        &:nth-child(1) {
+          svg {
+            left: 53%;
+            top: 52%;
+            width: 23px;
+          }
         }
         &::before {
           content: "";
@@ -93,8 +95,278 @@
     &-copy {
       font-size: 16px;
       line-height: 16px;
-      font-weight: 600;
       text-align: center;
+      strong{
+      font-weight: 600;
+        
+      }
+    }
+  }
+  &__bg{
+    width: 100%;
+    height: calc(100% + 150px);
+    position: absolute;
+    top: -27.5%;
+    left: 0;
+    z-index: -1;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+     
+    }
+  }
+}
+.join {
+  padding-top: 60px;
+  &__inner {
+    padding: 90px;
+    background: $gradient;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 36px;
+    h2 {
+      color: $main;
+      font-weight: 700;
+      small {
+        display: block;
+        font-size: 16px;
+        line-height: 16px;
+        color: $main;
+        margin-bottom: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.tax {
+  &__inner {
+    max-width: 1072px;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+   
+    h2 {
+      margin-bottom: 56px;
+    }
+    > h3 {
+      background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      margin: 33px 0 25px;
+      line-height: 33px;
+    }
+    .taxItem {
+      padding: 48px 30px;
+      border-radius: 36px;
+      background-color: $black-3;
+      min-height: 196px;
+      max-width: 336px;
+      width: calc(33.3% - 15px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h4 {
+        margin-bottom: 18px;
+        font-weight: 700;
+      }
+      h6 {
+        color: $gray;
+      }
+      &.center {
+        margin: 0 auto;
+      }
+    }
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+    p {
+      max-width: 959px;
+      margin: 0 auto 120px;
+    }
+    &-logos {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 920px;
+      margin: 0 auto;
+      a {
+        width: calc(33.3% - 15px);
+        max-width: 252px;
+        height: 72px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+.cart {
+  padding: unset;
+  &__inner {
+    padding: 60px 0 40px;
+    text-align: center;
+    max-width: 1210px;
+    margin: 0 auto;
+    h5 {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    h2 {
+      margin-bottom: 60px;
+    }
+    &-graphs {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 66px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1150px;
+      margin: 0 auto;
+      .cartItem {
+        width: calc(50% - 15px);
+        padding: 48px 20px;
+        background: $main;
+        border: 1px solid $gray3;
+        border-radius: 36px;
+        h3 {
+          background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block;
+          margin-bottom: 24px;
+          font-weight: 700;
+        }
+        a {
+          display: block;
+          font-size: 18px;
+          line-height: 18px;
+          margin-bottom: 25px;
+          &:last-child {
+            margin-bottom: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.roadmap {
+  &__inner {
+    text-align: center;
+    padding: 60px 0 70px;
+    max-width: 1192px;
+    margin: 0 auto;
+    h5 {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin-bottom: 60px;
+    }
+    &-main {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .roadmapItem {
+        max-width: 524px;
+        padding: 36px;
+        border-radius: 36px;
+        background-color: $black-3;
+        text-align: left;
+        margin-top: -32px;
+        width: calc(50% - 72px);
+        position: relative;
+        li {
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: unset;
+          }
+        }
+        &::after {
+          content: "";
+          width: 14px;
+          height: 14px;
+          background-color: $white;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          right: -79px;
+          z-index: 2;
+        }
+        &::before {
+          content: "";
+          width: 48px;
+          height: 48px;
+          background-color: $black-2;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          right: -96px;
+          z-index: 1;
+        }
+        h3 {
+          margin-bottom: 24px;
+          background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block;
+          line-height: 24px;
+          font-weight: 700;
+
+        }
+        &:nth-child(odd) {
+          margin: -32px 0 0 auto;
+          &::before {
+            right: unset;
+            left: -96px;
+          }
+          &:after {
+            right: unset;
+            left: -79px;
+          }
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      .line {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: calc(100% + 10px);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 }
