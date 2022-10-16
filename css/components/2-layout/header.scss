@@ -4,6 +4,9 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  .auto__container {
+    max-width: 1820px;
+  }
   &.sticky  {
    position: fixed;
    top: 0;
@@ -21,10 +24,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 320px;
+      width: 100px;
       img {
         width: 100%;
       }
+    }
+    .button {
+      font-weight: 500;
+      padding: 18px 30px;
     }
   }
 }
