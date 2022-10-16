@@ -103,9 +103,9 @@
   }
   &__bg {
     width: 100%;
-    height: calc(100% + 150px);
+    height: 125%;
     position: absolute;
-    top: -27.5%;
+    bottom: 0;
     left: 0;
     z-index: -1;
     img {
@@ -384,21 +384,7 @@
   }
 }
 
-ul {
-}
 
-main {
-  overflow: hidden;
-}
-.button {
-  &.uniq {
-    background: $white;
-    border-radius: 100px;
-    padding: 20px 31px;
-    font-size: 18px;
-    line-height: 18px;
-    color: $main;
-    font-weight: 600;
-    display: block;
-  }
-}
+
+
+
