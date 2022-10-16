@@ -331,6 +331,7 @@ main {
 .footer__inner-social a:nth-child(1) svg {
   left: 53%;
   top: 52%;
+  width: 23px;
 }
 .footer__inner-social a::before {
   content: "";
