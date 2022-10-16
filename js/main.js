@@ -77,19 +77,7 @@
 //   });
 // });
 
-// $(function () {
-//   $(".about__inner-slider").slick({
-//     dots: false,
-//     infinite: true,
-//     centerMode: false,
-//     arrows: false,
-//     fade: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     asNavFor: '.about__inner-swiper',
-//   });
-// });
+
 
 // var $status = $(".pagingInfo");
 // $(".infoClubs__slider").each(function (index, element) {
@@ -170,3 +158,16 @@
 // // faq end
 
 
+
+$(function () {
+    $(".hero__inner-slider").slick({
+      dots: true,
+      infinite: true,
+      centerMode: true,
+      arrows: false,
+      speed: 500,
+      focusOnSelect: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    });
+  });
