@@ -87,7 +87,7 @@ main {
     border: 1px solid $white;
     &.primary {
         background: linear-gradient(112.8deg, #50E1FC 14.8%, #AE62F7 85.2%);
-        border-color: transparent;
+        border: unset;
     }
     &.uniq {
         color: $main;
@@ -110,7 +110,9 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-bottom: 216%;
+    padding-bottom: 132%;
+    max-width: 312px;
+    margin: 0 auto;
     video {
         position: absolute;
         top: 0;
@@ -118,6 +120,8 @@ main {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 30px;
+        cursor: pointer;
         [poster]{
             width: 100%;
             height: 100%;
@@ -134,7 +138,7 @@ main {
         top: 50%;
         left: 50%;
         width: 105%;
-        height: 110%;
+        height: 105%;
         transform: translate(-50%, -50%);
         background: url("../images/phone.png") center no-repeat;
         background-size: cover;
