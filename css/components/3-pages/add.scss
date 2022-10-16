@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   &__inner {
-    padding: 43px 0 60px;
+    padding: 45px 0 60px;
     max-width: 950px;
     margin: 0 auto;
     &-logo {
@@ -96,24 +96,22 @@
       font-size: 16px;
       line-height: 16px;
       text-align: center;
-      strong{
-      font-weight: 600;
-        
+      strong {
+        font-weight: 600;
       }
     }
   }
-  &__bg{
+  &__bg {
     width: 100%;
     height: calc(100% + 150px);
     position: absolute;
     top: -27.5%;
     left: 0;
     z-index: -1;
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-     
     }
   }
 }
@@ -148,7 +146,7 @@
     margin: 0 auto;
     padding: 60px 0;
     text-align: center;
-   
+
     h2 {
       margin-bottom: 56px;
     }
@@ -299,6 +297,22 @@
         position: relative;
         li {
           margin-bottom: 20px;
+          font-size: 18px;
+          line-height: 28px;
+          padding-left: 25px;
+          position: relative;
+          &::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background-color: $white;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+          }
+
           &:last-child {
             margin-bottom: unset;
           }
@@ -337,7 +351,6 @@
           display: inline-block;
           line-height: 24px;
           font-weight: 700;
-
         }
         &:nth-child(odd) {
           margin: -32px 0 0 auto;
@@ -368,5 +381,24 @@
         }
       }
     }
+  }
+}
+
+ul {
+}
+
+main {
+  overflow: hidden;
+}
+.button {
+  &.uniq {
+    background: $white;
+    border-radius: 100px;
+    padding: 20px 31px;
+    font-size: 18px;
+    line-height: 18px;
+    color: $main;
+    font-weight: 600;
+    display: block;
   }
 }
