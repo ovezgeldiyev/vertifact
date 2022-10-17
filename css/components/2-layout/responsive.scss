@@ -5,10 +5,14 @@
 // 1380px
 @include xxxlg-xxxxlg {
     @include hero-xxxlg-xxxxlg;
+    @include benefits-xxxlg-xxxxlg;
+
 }
 // 1250px
 @include xlg-xxlg-extra {
     @include hero-xlg-xxlg-extra;
+    @include benefits-xlg-xxlg-extra;
+
 }
 // 1180px
 @include xlg-xxlg {
@@ -18,6 +22,8 @@
     }
     @include hero-xlg-xxlg;
     @include roadmap-xlg-xxlg;
+    @include join-xlg-xxlg;
+    @include benefits-xlg-xxlg;
 }
 // 1024px
 @include lg-xlg {
@@ -31,8 +37,18 @@
         font-size: 50px;
         line-height: 60px;
     }
+     .button {
+         &.uniq{
+            font-size: 17px;
+            padding: 18px 30px;
+         }
+      
+      }
     @include hero-lg-xlg;
     @include roadmap-lg-xlg;
+    @include tax-lg-xlg;
+    @include join-lg-xlg;
+    @include benefits-lg-xlg;
 
 }
 // 930px
@@ -47,12 +63,28 @@
     }
     @include hero-md-lg;
     @include roadmap-md-lg;
+    @include tex-lg-xlg;
+    @include join-lg-xlg;
+    @include benefits-md-lg;
 
 }
 
 // 840px
 @include  md-lg-extra {
-    
+    .button {
+        &.uniq{
+           font-size: 16px;
+           padding: 16px 28px;
+        }
+     
+     }
+    @include cart-md-lg-extra;
+    @include tex-md-lg-extra;
+    @include join-md-lg-extra;
+    @include footer-md-lg-extra;
+    @include benefits-md-lg-extra;
+
+
 }
 
 // 750px
@@ -65,8 +97,20 @@
         font-size: 16px;
         line-height: 16px;
     }
+    .button {
+        &.uniq{
+           font-size: 16px;
+           padding: 14px 25px;
+        }
+     
+     }
     @include hero-sm-md;
     @include roadmap-sm-md;
+    @include cart-sm-md;
+    @include tax-sm-md;
+    @include join-sm-md;
+    @include footer-sm-md;
+
 
 }
 // 650px
@@ -79,8 +123,22 @@
         font-size: 15px;
         line-height: 15px;
     }
+    .button {
+        &.uniq{
+           font-size: 18px;
+           line-height: 19px;
+           padding: 20px 36px;
+        }
+     
+     }
     @include hero-sm-md-extra;
     @include roadmap-sm-md-extra;
+    @include cart-sm-md-extra;
+    @include tax-sm-md-extra;
+    @include join-sm-md-extra;
+    @include footer-sm-md-extra;
+    @include benefits-sm-md-extra;
+
 
 }
 // 540px
@@ -105,11 +163,17 @@
 @include xxsm-xsm  {
     @include hero-xxsm-xsm;
     @include roadmap-xxsm-xsm;
+    @include tax-xxsm-xsm;
+    @include join-xxsm-xsm;
+    @include footer-xxsm-xsm;
+    @include benefitsItem-xxsm-xsm;
 
 }
 // 390px
 @include xxxsm-xxsm  {
     // @include hero-xxxsm-xxsm;
+    @include cart-xxxsm-xxsm;
+
 }
 
 
@@ -119,5 +183,20 @@
         font-size: 28px;
         line-height: 30px;
     }
+    .button {
+        &.uniq{
+           font-size: 16px;
+           line-height: 16px;
+           padding: 18px 30px;
+        }
+     
+     }
     @include roadmap-sm;
+    @include cart-sm;
+    @include tax-sm;
+    @include join-sm;
+    @include footer-sm;
+    @include benefitsItem-sm;
+
+
 }
