@@ -1,3 +1,533 @@
+.roadmap {
+  &__inner {
+    text-align: center;
+    padding-bottom: 70px;
+    max-width: 1192px;
+    margin: 0 auto;
+    h5 {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin-bottom: 60px;
+    }
+    &-main {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .roadmapItem {
+        max-width: 524px;
+        padding: 36px;
+        border-radius: 36px;
+        background-color: $black-3;
+        text-align: left;
+        margin-top: -32px;
+        width: calc(50% - 72px);
+        position: relative;
+        li {
+          margin-bottom: 20px;
+          font-size: 18px;
+          line-height: 28px;
+          padding-left: 25px;
+          position: relative;
+          &::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background-color: $white;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+          }
+
+          &:last-child {
+            margin-bottom: unset;
+          }
+        }
+        &::after {
+          content: "";
+          width: 14px;
+          height: 14px;
+          background-color: $white;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          right: -79px;
+          z-index: 2;
+        }
+        &::before {
+          content: "";
+          width: 48px;
+          height: 48px;
+          background-color: $black-2;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          right: -96px;
+          z-index: 1;
+        }
+        h3 {
+          margin-bottom: 24px;
+          background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block;
+          line-height: 30px;
+          font-weight: 700;
+        }
+        &:nth-child(odd) {
+          margin: -32px 0 0 auto;
+          &::before {
+            right: unset;
+            left: -96px;
+          }
+          &:after {
+            right: unset;
+            left: -79px;
+          }
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      .line {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: calc(100% + 10px);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin roadmap-xlg-xxlg {
+  .roadmap {
+    &__inner {
+      h2 {
+        margin-bottom: 50px;
+      }
+      &-main {
+        .roadmapItem {
+          padding: 30px;
+          li {
+            font-size: 17px;
+            line-height: 25px;
+            margin-bottom: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin roadmap-lg-xlg {
+  .roadmap {
+    &__inner {
+      &-main {
+        .roadmapItem {
+          width: calc(50% - 45px);
+          li {
+            font-size: 16px;
+            line-height: 24px;
+          }
+          &:nth-child(odd) {
+            &::before {
+              left: -67px;
+            }
+            &:after {
+              left: -52px;
+            }
+          }
+          &::before {
+            right: -67px;
+            width: 43px;
+            height: 43px;
+          }
+          &:after {
+            right: -52.5px;
+          }
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin roadmap-md-lg {
+  .roadmap {
+    &__inner {
+      &-main {
+        .roadmapItem {
+          padding: 25px;
+          border-radius: 30px;
+          li {
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 15px;
+          }
+          h3 {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin roadmap-sm-md {
+  .roadmap {
+    &__inner {
+      &-main {
+        .roadmapItem {
+          padding: 20px;
+          width: calc(50% - 35px);
+          li {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+            border-radius: 24px;
+          }
+          h3 {
+            margin-bottom: 15px;
+          }
+          &:nth-child(odd) {
+            &::before {
+              left: -54px;
+            }
+            &:after {
+              left: -42px;
+            }
+          }
+          &::before {
+            width: 37px;
+            height: 38px;
+            right: -54px;
+          }
+          &:after {
+            right: -41.5px;
+          }
+        }
+      }
+    }
+  }
+}
+// 650px
+@mixin roadmap-sm-md-extra {
+  .roadmap {
+    &__inner {
+      h2 {
+        margin-bottom: 40px;
+      }
+      &-main {
+        .roadmapItem {
+          padding: 24px 18px;
+          width: calc(100% - 76px);
+          margin: 0 0 18px auto;
+         
+          li {
+            font-size: 16px;
+            line-height: 24px;
+          }
+          h3 {
+            margin-bottom: 18px;
+          }
+          &::before {
+            right: unset;
+            left: -70px;
+          }
+          &::after {
+            right: unset;
+            left: -58px;
+          }
+          &:nth-child(odd) {
+            margin: 0 0 18px auto;
+            &::before {
+              left: -70px;
+            }
+            &:after {
+              left: -58px;
+            }
+          }
+        }
+        .line {
+          transform: unset;
+          left: 24px;
+          top: 0;
+          height:calc(100% - 12px);
+        }
+      }
+    }
+  }
+}
+// 540px
+@mixin roadmap-xsm-sm {
+  .roadmap {
+    &__inner {
+      h2 {
+        margin-bottom: 36px;
+      }
+      &-main {
+        .roadmapItem {
+          width: calc(100% - 45px);
+          &:nth-child(odd) {
+            &::before {
+              left: unset;
+              right: calc(100% + 12px);
+            }
+            &:after {
+              right: calc(100% + 23px);
+              left: unset;
+            }
+          }
+          &::before {
+            left: unset;
+            right: calc(100% + 12px);
+            width: 37px;
+            height: 37px;
+          }
+          &:after {
+            right: calc(100% + 23px);
+            left: unset;
+          }
+        }
+        .line {
+          left: 14px;
+        }
+      }
+    }
+  }
+}
+
+// 440px
+@mixin roadmap-xxsm-xsm {
+  .roadmap {
+    &__inner {
+      &-main {
+        .roadmapItem {
+          li {
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+// 365px
+@mixin roadmap-sm{
+  .roadmap {
+    &__inner {
+      &-main {
+        .roadmapItem {
+          padding: 15px 10px;
+          border-radius: 20px;
+          width: calc(100% - 35px);
+          &::before{
+            width: 28px;
+            height: 28px;
+          }
+          &:after{
+            width: 9px;
+            height: 9px;
+            right: calc(100% + 21px);
+          }
+          &:nth-child(odd){
+            &:after{
+            right: calc(100% + 21px);
+
+            }
+          }
+          h3{
+            font-size:25px;
+            line-height: 25px;
+          }
+          li {
+            font-size: 13px;
+            line-height: 20px;
+          }
+        }
+        .line{
+          left: 8px;
+        }
+      }
+    }
+  }
+  
+}
+
+.cart {
+  padding: unset;
+  &__inner {
+    padding: 60px 0 40px;
+    text-align: center;
+    max-width: 1210px;
+    margin: 0 auto;
+    h5 {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    h2 {
+      margin-bottom: 60px;
+    }
+    &-graphs {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 66px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1150px;
+      margin: 0 auto;
+      .cartItem {
+        width: calc(50% - 15px);
+        padding: 48px 20px;
+        background: $main;
+        border: 1px solid $gray3;
+        border-radius: 36px;
+        h3 {
+          background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block;
+          margin-bottom: 24px;
+          font-weight: 700;
+        }
+        a {
+          display: block;
+          font-size: 18px;
+          line-height: 18px;
+          margin-bottom: 25px;
+          &:last-child {
+            margin-bottom: unset;
+          }
+        }
+      }
+    }
+  }
+}
+// 840px
+
+
+.tax {
+  &__inner {
+    max-width: 1072px;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 56px;
+    }
+    > h3 {
+      background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      margin: 33px 0 25px;
+      line-height: 33px;
+    }
+    .taxItem {
+      padding: 48px 30px;
+      border-radius: 36px;
+      background-color: $black-3;
+      max-width: 336px;
+      width: calc(33.3% - 15px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h4 {
+        margin-bottom: 18px;
+        font-weight: 700;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h6 {
+        color: $gray;
+      }
+      &.center {
+        margin: 0 auto;
+      }
+    }
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+    p {
+      max-width: 959px;
+      margin: 0 auto 120px;
+    }
+    &-logos {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 920px;
+      margin: 0 auto;
+      a {
+        width: calc(33.3% - 15px);
+        max-width: 252px;
+        height: 72px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+.join {
+  padding-top: 60px;
+  &__inner {
+    padding: 90px;
+    background: $gradient;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 36px;
+    h2 {
+      color: $main;
+      font-weight: 700;
+      small {
+        display: block;
+        font-size: 16px;
+        line-height: 16px;
+        color: $main;
+        margin-bottom: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
 .footer {
   position: relative;
   &__inner {
@@ -103,9 +633,9 @@
   }
   &__bg {
     width: 100%;
-    height: calc(100% + 150px);
+    height: 125%;
     position: absolute;
-    top: -27.5%;
+    bottom: 0;
     left: 0;
     z-index: -1;
     img {
@@ -115,276 +645,3 @@
     }
   }
 }
-.join {
-  padding-top: 60px;
-  &__inner {
-    padding: 90px;
-    background: $gradient;
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 36px;
-    h2 {
-      color: $main;
-      font-weight: 700;
-      small {
-        display: block;
-        font-size: 16px;
-        line-height: 16px;
-        color: $main;
-        margin-bottom: 18px;
-        font-weight: 400;
-      }
-    }
-  }
-}
-.tax {
-  &__inner {
-    max-width: 1072px;
-    margin: 0 auto;
-    padding: 60px 0;
-    text-align: center;
-
-    h2 {
-      margin-bottom: 56px;
-    }
-    > h3 {
-      background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-      margin: 33px 0 25px;
-      line-height: 33px;
-    }
-    .taxItem {
-      padding: 48px 30px;
-      border-radius: 36px;
-      background-color: $black-3;
-      max-width: 336px;
-      width: calc(33.3% - 15px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      h4 {
-        margin-bottom: 18px;
-        font-weight: 700;
-        height: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      h6 {
-        color: $gray;
-      }
-      &.center {
-        margin: 0 auto;
-      }
-    }
-
-    &-row {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-bottom: 60px;
-    }
-    p {
-      max-width: 959px;
-      margin: 0 auto 120px;
-    }
-    &-logos {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 920px;
-      margin: 0 auto;
-      a {
-        width: calc(33.3% - 15px);
-        max-width: 252px;
-        height: 72px;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-    }
-  }
-}
-.cart {
-  padding: unset;
-  &__inner {
-    padding: 60px 0 40px;
-    text-align: center;
-    max-width: 1210px;
-    margin: 0 auto;
-    h5 {
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-    h2 {
-      margin-bottom: 60px;
-    }
-    &-graphs {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 66px;
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-    &-row {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1150px;
-      margin: 0 auto;
-      .cartItem {
-        width: calc(50% - 15px);
-        padding: 48px 20px;
-        background: $main;
-        border: 1px solid $gray3;
-        border-radius: 36px;
-        h3 {
-          background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          display: inline-block;
-          margin-bottom: 24px;
-          font-weight: 700;
-        }
-        a {
-          display: block;
-          font-size: 18px;
-          line-height: 18px;
-          margin-bottom: 25px;
-          &:last-child {
-            margin-bottom: unset;
-          }
-        }
-      }
-    }
-  }
-}
-
-.roadmap {
-  &__inner {
-    text-align: center;
-    padding: 60px 0 70px;
-    max-width: 1192px;
-    margin: 0 auto;
-    h5 {
-      font-weight: 500;
-      text-transform: uppercase;
-    }
-    h2 {
-      margin-bottom: 60px;
-    }
-    &-main {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      .roadmapItem {
-        max-width: 524px;
-        padding: 36px;
-        border-radius: 36px;
-        background-color: $black-3;
-        text-align: left;
-        margin-top: -32px;
-        width: calc(50% - 72px);
-        position: relative;
-        li {
-          margin-bottom: 20px;
-          font-size: 18px;
-          line-height: 28px;
-          padding-left: 25px;
-          position: relative;
-          &::before {
-            content: "";
-            width: 5px;
-            height: 5px;
-            background-color: $white;
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            border-radius: 50%;
-          }
-
-          &:last-child {
-            margin-bottom: unset;
-          }
-        }
-        &::after {
-          content: "";
-          width: 14px;
-          height: 14px;
-          background-color: $white;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          border-radius: 50%;
-          right: -79px;
-          z-index: 2;
-        }
-        &::before {
-          content: "";
-          width: 48px;
-          height: 48px;
-          background-color: $black-2;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          border-radius: 50%;
-          right: -96px;
-          z-index: 1;
-        }
-        h3 {
-          margin-bottom: 24px;
-          background: linear-gradient(112.8deg, #50e1fc 14.8%, #ae62f7 85.2%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          display: inline-block;
-          line-height: 24px;
-          font-weight: 700;
-        }
-        &:nth-child(odd) {
-          margin: -32px 0 0 auto;
-          &::before {
-            right: unset;
-            left: -96px;
-          }
-          &:after {
-            right: unset;
-            left: -79px;
-          }
-        }
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-      .line {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 3px;
-        height: calc(100% + 10px);
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-    }
-  }
-}
-
-

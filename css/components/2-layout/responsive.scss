@@ -12,37 +12,112 @@
 }
 // 1180px
 @include xlg-xxlg {
+    h2{
+        font-size: 55px;
+        line-height: 65px;
+    }
     @include hero-xlg-xxlg;
+    @include roadmap-xlg-xxlg;
 }
 // 1024px
 @include lg-xlg {
     ::-webkit-scrollbar{
         display: none;
     }
+    .auto__container{
+        padding: 0 25px;
+    }
+    h2{
+        font-size: 50px;
+        line-height: 60px;
+    }
     @include hero-lg-xlg;
+    @include roadmap-lg-xlg;
+
 }
 // 930px
 @include md-lg {
+    h2{
+        font-size: 50px;
+        line-height: 60px;
+    }
+    h5{
+        font-size: 17px;
+        line-height: 17px;
+    }
     @include hero-md-lg;
+    @include roadmap-md-lg;
+
 }
+
+// 840px
+@include  md-lg-extra {
+    
+}
+
 // 750px
 @include sm-md {
+    h2{
+        font-size: 45px;
+        line-height: 55px;
+    }
+    h5{
+        font-size: 16px;
+        line-height: 16px;
+    }
     @include hero-sm-md;
+    @include roadmap-sm-md;
+
 }
 // 650px
 @include sm-md-extra {
+    h2{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    h5{
+        font-size: 15px;
+        line-height: 15px;
+    }
     @include hero-sm-md-extra;
+    @include roadmap-sm-md-extra;
+
 }
 // 540px
 @include xsm-sm  {
+    .auto__container{
+        padding: 0 18px;
+    }
+    h2{
+        font-size: 36px;
+        line-height: 45px;
+    }
+    h5{
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 12px
+    }
     @include hero-xsm-sm;
+    @include roadmap-xsm-sm;
+
 }
 // 440px
 @include xxsm-xsm  {
     @include hero-xxsm-xsm;
+    @include roadmap-xxsm-xsm;
+
 }
 // 390px
 @include xxxsm-xxsm  {
     // @include hero-xxxsm-xxsm;
 }
 
+
+// 365px
+@include sm{
+    h2{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    @include roadmap-sm;
+}
