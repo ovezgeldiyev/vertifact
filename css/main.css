@@ -937,7 +937,6 @@ main {
   padding: 48px 30px;
   border-radius: 36px;
   background-color: #121212;
-  min-height: 196px;
   max-width: 336px;
   width: calc(33.3% - 15px);
   display: -webkit-box;
@@ -954,6 +953,16 @@ main {
 .tax__inner .taxItem h4 {
   margin-bottom: 18px;
   font-weight: 700;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tax__inner .taxItem h6 {
   color: #9D9AA7;
@@ -1191,21 +1200,6 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-main {
-  overflow: hidden;
-}
-
-.button.uniq {
-  background: #fff;
-  border-radius: 100px;
-  padding: 20px 31px;
-  font-size: 18px;
-  line-height: 18px;
-  color: #030303;
-  font-weight: 600;
-  display: block;
 }
 
 @media (max-width: 1024px) {
