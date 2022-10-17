@@ -4,19 +4,44 @@
 }
 // 1380px
 @include xxxlg-xxxxlg {
+    h1{
+        font-size: 62px;
+        line-height: 74px;
+    }
     @include hero-xxxlg-xxxxlg;
+    @include header-xxxlg-xxxxlg;
+    @include nav-xxxlg-xxxxlg;
+
+
 }
 // 1250px
 @include xlg-xxlg-extra {
     @include hero-xlg-xxlg-extra;
+
 }
 // 1180px
 @include xlg-xxlg {
+    .auto__container{
+        padding: 0 30px;
+    }
+
     h2{
         font-size: 55px;
         line-height: 65px;
     }
+    h3{
+        font-size: 26px;
+        line-height: 28px;
+    }
+    p {
+        &.ex {
+            font-size: 22px;
+            line-height: 34px;
+        }
+    }
     @include hero-xlg-xxlg;
+    @include intro-xlg-xxlg;
+
     @include roadmap-xlg-xxlg;
 }
 // 1024px
@@ -27,16 +52,46 @@
     .auto__container{
         padding: 0 25px;
     }
+    h1{
+        font-size: 52px;
+        line-height: 64px;
+    }
+
     h2{
         font-size: 50px;
         line-height: 60px;
     }
+    h3{
+        font-size: 24px;
+        line-height: 26px;
+    }
+    p {
+        &.ex {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &.big {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    li {
+        &.big {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    @include header-lg-xlg;
+    @include nav-lg-xlg;
     @include hero-lg-xlg;
+    @include intro-lg-xlg;
+
     @include roadmap-lg-xlg;
 
 }
 // 930px
 @include md-lg {
+
     h2{
         font-size: 50px;
         line-height: 60px;
@@ -44,6 +99,18 @@
     h5{
         font-size: 17px;
         line-height: 17px;
+    }
+    p {
+        &.big {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    li {
+        &.big {
+            font-size: 14px;
+            line-height: 22px;
+        }
     }
     @include hero-md-lg;
     @include roadmap-md-lg;
@@ -57,6 +124,10 @@
 
 // 750px
 @include sm-md {
+    h1{
+        font-size: 42px;
+        line-height: 54px;
+    }
     h2{
         font-size: 45px;
         line-height: 55px;
@@ -64,8 +135,30 @@
     h5{
         font-size: 16px;
         line-height: 16px;
+        &.sm {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    p {
+        &.ex {
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+    .button {
+        padding: 20px 24px;
+        font-size: 16px;
+        line-height: 18px;
+        &__row {
+            .button {
+                margin-right: 12px;
+            }
+        }
     }
     @include hero-sm-md;
+    @include intro-sm-md;
+
     @include roadmap-sm-md;
 
 }
@@ -80,6 +173,8 @@
         line-height: 15px;
     }
     @include hero-sm-md-extra;
+    @include intro-sm-md-extra;
+
     @include roadmap-sm-md-extra;
 
 }
@@ -97,6 +192,10 @@
         line-height: 14px;
         margin-bottom: 12px
     }
+
+    @include header-xsm-sm;
+    @include nav-xsm-sm;
+
     @include hero-xsm-sm;
     @include roadmap-xsm-sm;
 
@@ -115,9 +214,23 @@
 
 // 365px
 @include sm{
+    h1{
+        font-size: 34px;
+        line-height: 40px;
+    }
     h2{
         font-size: 28px;
         line-height: 30px;
+    }
+    .button {
+        padding: 16px 20px;
+        font-size: 14px;
+        line-height: 16px;
+        &__row {
+            .button {
+                margin-right: 7px;
+            }
+        }
     }
     @include roadmap-sm;
 }
