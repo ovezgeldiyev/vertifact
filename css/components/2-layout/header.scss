@@ -14,6 +14,7 @@
    width: 100%;
    animation-name: sticky;
    animation-duration: .4s;
+   background-color: rgba($black, .9);
   }
   &__inner {
     padding: 30px 0;
@@ -29,22 +30,121 @@
         width: 100%;
       }
     }
+    &-buttons {
+      display: flex;
+      align-items: center;
+    }
     .button {
       font-weight: 500;
-      padding: 18px 30px;
+      &.primary {
+        padding: 0;
+
+      }
+      span {
+        background: $gradient;
+        padding: 18px 30px;
+        border-radius: 100px;
+      }
+
+    }
+  }
+}
+// 1380px
+@mixin header-xxxlg-xxxxlg {
+  .header {
+    &__inner {
+      &-logo {
+        width: 85px;
+      }
+      .button {
+        padding: 14px 20px;
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
 }
 // 1024px
 @mixin header-lg-xlg {
     .header {
+      background-color: $black;
+      &.sticky {
+        background-color: $black;
+      }
+      &__inner {
+        &-logo {
+          width: 70px;
+        }
+        &-buttons {
+          .button {
+            position: absolute !important;
+            top: 50%;
+            right: 76px;
+            transform: translateY(-50%);
+      
+          }
+        }
+        .button {
+          position: relative;
+          &.active {
+            animation-name: fadeOut;
+            animation-duration: .4s;
+            display: none;
     
+          }
+          span {
+            background: $black;
+            padding: 14px 20px;
+            border-radius: 100px;
+          }
+          &.primary {
+            transition: .4s ease;
+            padding: 0;
+
+            &:hover {
+              opacity: .8;
+              background: $black;
+            }
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            background: $gradient;
+            transform: translate(-50%,-50%);
+            border-radius: 100px;
+            z-index: -1;
+            pointer-events: none;
+          }
+        }
+      }
     }
 }
 // 540px
 @mixin header-xsm-sm {
     .header {
-    
+      &__inner {
+        padding: 23px 0;
+        &-logo {
+          width: 54px;
+        }
+        &-buttons {
+          .button {
+            right: 50px;
+          }
+        }
+        .button {
+          font-size: 12px;
+          line-height: 14px;
+          span {
+            padding: 10px 12px;
+
+          }
+        }
+      }
     }
 }
 @keyframes sticky {
@@ -56,4 +156,13 @@
       top: 0;
       opacity: 1;
     }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
+  100% {
+    opacity: 0;
+
+  }
+}

@@ -57,20 +57,27 @@ p {
     line-height: 36px;
   }
 }
-ul {
-    li {
-        font-size: 18px;
+
+li {
+    font-size: 18px;
+    line-height: 28px;
+    list-style: none;
+    &.big {
+        font-size: 20px;
         line-height: 28px;
-        list-style: none;
-        &.big {
-            font-size: 20px;
-            line-height: 28px;
-        }
     }
 }
 
+
 main {
   overflow: hidden;
+}
+.anchor {
+  position: relative;
+  top: -110px;
+  &#wallet {
+    top: -140px;
+  }
 }
 .button {
     display: inline-flex;
@@ -113,6 +120,7 @@ main {
     padding-bottom: 132%;
     max-width: 312px;
     margin: 0 auto;
+    width: 64%;
     video {
         position: absolute;
         top: 0;
