@@ -89,7 +89,7 @@
           &.active {
             animation-name: fadeOut;
             animation-duration: .4s;
-            display: none;
+            opacity: 0;
     
           }
           span {

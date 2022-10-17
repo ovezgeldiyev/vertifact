@@ -91,7 +91,7 @@
         z-index: 9;
         background: rgba($color: #000000, $alpha: 0.01);
         transform: translateX(100%);
-        @include transition;
+       transition: .4s ease;
         &.active {
             @include transformReset;
         }

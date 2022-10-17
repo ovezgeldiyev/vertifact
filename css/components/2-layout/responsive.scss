@@ -248,7 +248,12 @@
         line-height: 14px;
         margin-bottom: 12px
     }
-
+    .video {
+        &__play {
+            width: 36px;
+            height: 36px;
+        }
+    }
     @include header-xsm-sm;
     @include nav-xsm-sm;
 

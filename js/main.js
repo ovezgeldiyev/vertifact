@@ -71,6 +71,8 @@ $(function () {
     focusOnSelect: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 750,
@@ -90,12 +92,49 @@ $(function () {
 });
 
 // video
-let video = document.getElementById("video");
+// let video = document.getElementById("video");
+
+// video.onclick = function () {
+//   if (video.paused == true) {
+//     video.play();
+//   } else {
+//     video.pause();
+//   }
+// };
+
+
+let playButton = document.getElementById("play");
+let banner = document.getElementById("banner");
+
+playButton.addEventListener("click", function() {
+  if (video.paused == true) {
+    video.play();
+
+    playButton.classList.toggle("active");
+    banner.classList.toggle("active");
+
+  } else {
+    video.pause();
+
+    playButton.classList.remove("active");
+    banner.classList.remove("active");
+
+  }
+  
+});
 
 video.onclick = function () {
   if (video.paused == true) {
     video.play();
-  } else {
+
+    playButton.classList.toggle("active");
+    banner.classList.toggle("active");
+  }
+  else {
     video.pause();
+
+    playButton.classList.remove("active");
+    banner.classList.remove("active");
+
   }
 };
