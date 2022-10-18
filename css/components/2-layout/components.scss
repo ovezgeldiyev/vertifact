@@ -1,29 +1,29 @@
 h1 {
   font-weight: 700;
-  font-size: 72px;
-  line-height: 84px;
+  font-size: 56px;
+  line-height: 68px;
   text-align: center;
 }
 
 h2 {
-  font-size: 60px;
-  line-height: 65px;
+  font-size: 56px;
+  line-height: 68px;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 30px;
-  line-height: 34px;
+  font-size: 26px;
+  line-height: 30px;
 }
 
 h4 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 22px;
+  line-height: 30px;
 }
 
 h5 {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
     background: linear-gradient(112.8deg, #50E1FC 14.8%, #AE62F7 85.2%);
     -webkit-background-clip: text;
@@ -44,17 +44,17 @@ h5 {
 }
 
 h6 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
 }
 p {
   &.big {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 24px;
   }
   &.ex {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 32px;
   }
 }
 
@@ -85,13 +85,13 @@ main {
     align-items: center;
     padding: 20px 36px;
     border-radius: 100px;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
     background-color: $main;
-    border: 1px solid $white;
+    border: 2px solid $white;
     &.primary {
         background: linear-gradient(112.8deg, #50E1FC 14.8%, #AE62F7 85.2%);
         border: unset;
@@ -102,7 +102,6 @@ main {
     }
     &__row {
         display: flex;
-        align-items: center;
         justify-content: center;
         .button {
             margin-right: 22px;

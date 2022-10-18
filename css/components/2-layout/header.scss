@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 10;
   .auto__container {
-    max-width: 1820px;
+    max-width: 1680px;
   }
   &.sticky  {
    position: fixed;
@@ -25,7 +25,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100px;
+      width: 72px;
       img {
         width: 100%;
       }
@@ -111,8 +111,8 @@
             content: "";
             top: 50%;
             left: 50%;
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
             background: $gradient;
             transform: translate(-50%,-50%);
             border-radius: 100px;
